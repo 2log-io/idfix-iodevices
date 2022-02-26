@@ -52,8 +52,8 @@ namespace IDFix
                 resetPin.pin_bit_mask   = ((uint64_t)(((uint64_t)1)<<pin));
             }
             resetPin.mode           = GPIO_MODE_INPUT;
-            resetPin.pull_down_en   = GPIO_PULLDOWN_DISABLE;
-            resetPin.pull_up_en     = GPIO_PULLUP_ENABLE;
+            resetPin.pull_down_en   = GPIO_PULLDOWN_ENABLE;
+            resetPin.pull_up_en     = GPIO_PULLUP_DISABLE;
             if( gpio_config(&resetPin) != ESP_OK)
             {
                 ESP_LOGE(LOG_TAG, "Failed to set GPIO config for button");
